@@ -1,7 +1,8 @@
 @extends('layouts.home')
+
+
 @section('mainContent')
 
-    <!-- ======================= Main Content ======================= -->
     <div id="content-area" class="main-content"><div class="post-4916 page type-page status-publish hentry" id="post-4916">
 
             <div class="row pad-top-20 pad-btm-20">
@@ -203,6 +204,8 @@ Franco Pagliazzi, Gesang (Florenz)</p>
             </div>
         </div>
     </div>
+
+
 
 
 @endsection

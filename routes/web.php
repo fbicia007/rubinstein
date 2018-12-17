@@ -61,3 +61,6 @@ Route::get('educationalDetails','IndexController@educationalDetails');
 Route::get('competitions','IndexController@competitions');
 Route::get('competitionDetails','IndexController@competitionDetails');
 
+Route::get('registration','IndexController@registration');
+Route::get('location','IndexController@location');
+

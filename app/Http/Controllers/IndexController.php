@@ -24,10 +24,6 @@ class IndexController extends Controller
     {
         return view('home.contact');
     }
-    public function branch()
-    {
-        return view('home.branch');
-    }
     public function lecturers()
     {
         return view('home.lecturers');
@@ -66,5 +62,13 @@ class IndexController extends Controller
     public function competitionDetails()
     {
         return view('home.competitionDetails');
+    }
+    public function registration()
+    {
+        return view('home.registration');
+    }
+    public function location()
+    {
+        return view('home.location');
     }
 }

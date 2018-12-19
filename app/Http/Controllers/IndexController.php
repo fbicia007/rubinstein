@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Model\Competition;
 use App\Http\Model\Educational;
 use App\Http\Model\Lecturer;
+use App\Http\Model\Masters;
 use App\Http\Model\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -44,12 +45,16 @@ class IndexController extends Controller
 
     public function masterClasses()
     {
-        return view('home.masterClasses');
+        $masters = Masters::all();
+
+        return view('home.masterClasses', compact('masters'));
     }
 
     public function masterClassDetails()
     {
-        return view('home.masterClassDetails');
+        $masters = Masters::all();
+
+        return view('home.masterClassDetails', compact('masters'));
     }
 
     public function news()

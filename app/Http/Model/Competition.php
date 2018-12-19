@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Competition extends Model
 {
     protected $table='competitions';
-    protected $primaryKey='id';
+    protected $primaryKey='competition_id';
     public $timestamps=false;
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Model\Competition;
 use App\Http\Model\Educational;
 use App\Http\Model\Lecturer;
 use App\Http\Model\News;
@@ -36,7 +37,9 @@ class IndexController extends Controller
 
     public function lecturerDetails()
     {
-        return view('home.lecturerDetails');
+        $lecturer = Lecturer::all();
+
+        return view('home.lecturerDetails', compact('lecturer'));
     }
 
     public function masterClasses()
@@ -70,7 +73,9 @@ class IndexController extends Controller
 
     public function competitions()
     {
-        return view('home.competitions');
+        $competitions = Competition::all();
+
+        return view('home.competitions', compact('competitions'));
     }
 
     public function competitionDetails()

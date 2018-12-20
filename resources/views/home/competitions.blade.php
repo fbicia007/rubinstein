@@ -38,12 +38,12 @@
 
                     <div class="row collapse ar-margin-bottom">
                         <div class="small-12 show-for-small-only columns">
-                            <a href="{{url('competitionDetails')}}">
+                            <a href="{{url('competitionDetails/'.$competition['competition_id'])}}">
                                 <img style="width: 100%; margin: 0;" src="{{'images/competition/'.$competition['competition_pic']}}" />
                             </a>
                         </div>
                         <div class="small-12 columns clearfix">
-                            <a href="{{url('competitionDetails')}}">
+                            <a href="{{url('competitionDetails/'.$competition['competition_id'])}}">
                                 <img
                                         style="width: auto; margin: 0;"
                                         class="medium-up-height-200 show-for-medium-up left"
@@ -53,7 +53,7 @@
                                 <section class="ar-panel medium-up-height-200"
                                          style="min-width: 150px; padding-right: 0rem;">
                                     <header>
-                                        <a href="{{url('competitionDetails')}}">
+                                        <a href="{{url('competitionDetails/'.$competition['competition_id'])}}">
                                             <span>{{$competition['competition_title']}}</span>
                                         </a>
                                     </header>
@@ -63,7 +63,7 @@
                                         </ul>
                                     </section>
                                     <footer>
-                                        <span class="right"><a href="{{url('competitionDetails')}}" class="page-btn ar-btn ar-btn-sm">详细信息</a></span>
+                                        <span class="right"><a href="{{url('competitionDetails/'.$competition['competition_id'])}}" class="page-btn ar-btn ar-btn-sm">详细信息</a></span>
                                     </footer>
                                 </section>
                             </div>

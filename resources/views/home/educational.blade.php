@@ -27,24 +27,24 @@
                     @foreach($educational as $educational_one)
                     <div class="row collapse ar-margin-bottom">
                         <div class="small-12 show-for-small-only columns">
-                            <a href="{{url('educationalDetails')}}"><img
-                                        style="width: 100%; margin: 0;" src="{{$educational_one['edu_pic']}}" /></a>
+                            <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
+                                        style="width: 100%; margin: 0;" src="{{url('images/edu/'.$educational_one['edu_pic'])}}" /></a>
                         </div>
                         <div class="small-12 columns clearfix">
-                            <a href="{{url('educationalDetails')}}"><img
+                            <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
                                         style="width: auto; margin: 0;"
                                         class="medium-up-height-250 show-for-medium-up left"
-                                        src="{{$educational_one['edu_pic']}}" /></a>
+                                        src="{{url('images/edu/'.$educational_one['edu_pic'])}}" /></a>
                             <div style="display: inline;">
                                 <section class="ar-panel medium-up-height-250">
                                     <header>
-                                        <a href="{{url('educationalDetails')}}">{{$educational_one['edu_name']}}</a>
+                                        <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}">{{$educational_one['edu_name']}}</a>
                                     </header>
                                     <section class="content">
                                         <p>{{$educational_one['edu_info']}}</p>
                                     </section>
                                     <footer>
-                                        <span class="right"><a href="{{url('educationalDetails')}}" class="page-btn ar-btn ">更多信息</a></span>
+                                        <span class="right"><a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}" class="page-btn ar-btn ">更多信息</a></span>
                                     </footer>
                                 </section>
                             </div>

@@ -48,18 +48,21 @@ Route::get('infos','IndexController@infos');
 Route::get('contact','IndexController@contact');
 Route::get('news','IndexController@news');
 Route::get('branch','IndexController@branch');
+Route::get('imprint','IndexController@imprint');
+Route::get('dp','IndexController@dp');
 
 Route::get('lecturers','IndexController@lecturers');
-Route::get('lecturerDetails','IndexController@lecturerDetails');
+Route::get('lecturerDetails/{lecturerId}','IndexController@lecturerDetails');
+
 
 Route::get('masterClasses','IndexController@masterClasses');
-Route::get('masterClassDetails','IndexController@masterClassDetails');
+Route::get('masterClassDetails/{masterId}','IndexController@masterClassDetails');
 
 Route::get('educationalSystem','IndexController@educationalSystem');
-Route::get('educationalDetails','IndexController@educationalDetails');
+Route::get('educationalDetails/{eduId}','IndexController@educationalDetails');
 
 Route::get('competitions','IndexController@competitions');
-Route::get('competitionDetails','IndexController@competitionDetails');
+Route::get('competitionDetails/{compId}','IndexController@competitionDetails');
 
 Route::get('registration','IndexController@registration');
 Route::get('location','IndexController@location');

@@ -27,7 +27,7 @@
                         @foreach($lecturer as $lecturer_one)
                         <div class="teachers-list">
                             <div class="teachers-list-image">
-                                <a href="{{url('lecturerDetails')}}">
+                                <a href="{{url('lecturerDetails/'.$lecturer_one['lecturer_id'])}}">
                                     <img width="326" height="327" src="{{url('images/lecturer/'.$lecturer_one['lecturer_pic'].'.jpg')}}" class="attachment- size- wp-post-image" alt="" srcset="{{url('images/lecturer/'.$lecturer_one['lecturer_pic'].'.jpg')}} 326w, {{url('images/lecturer/'.$lecturer_one['lecturer_pic'].'-150x150.jpg')}} 150w, {{url('images/lecturer/'.$lecturer_one['lecturer_pic'].'-300x300.jpg')}} 300w" sizes="(max-width: 326px) 100vw, 326px" />
                                     <span class="overlay"><span class="more-info">详细信息</span></span>
                                 </a>

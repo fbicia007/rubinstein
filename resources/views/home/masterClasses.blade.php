@@ -34,12 +34,12 @@
                 <div class="small-12 large-6 columns">
                     <div class="row collapse ar-margin-bottom">
                         <div class="small-12 show-for-small-only columns">
-                            <a href="{{url('masterClassDetails')}}">
+                            <a href="{{url('masterClassDetails/'.$master['master_id'])}}">
                                 <img style="width: 100%; margin: 0;" src="{{url('images/master/'.$master['master_pic'])}}" />
                             </a>
                         </div>
                         <div class="small-12 columns clearfix">
-                            <a href="{{url('masterClassDetails')}}">
+                            <a href="{{url('masterClassDetails/'.$master['master_id'])}}">
                                 <img style="width: auto; margin: 0;"
                                         class="medium-up-height-200 show-for-medium-up left"
                                         src="{{url('images/master/'.$master['master_pic'])}}" />
@@ -48,7 +48,7 @@
                                 <section class="ar-panel medium-up-height-200"
                                          style="min-width: 150px;">
                                     <header>
-                                        <a style="text-transform: uppercase;" href="{{url('masterClassDetails')}}">{{$master['master_name']}}</a>
+                                        <a style="text-transform: uppercase;" href="{{url('masterClassDetails/'.$master['master_id'])}}">{{$master['master_name']}}</a>
                                     </header>
                                     <section class="content">
                                         <ul class="fa-ul">
@@ -58,7 +58,7 @@
                                         </ul>
                                     </section>
                                     <footer>
-                                        <span class="right"><a href="{{url('masterClassDetails')}}" class="page-btn ar-btn ar-btn-sm">详细信息</a></span>
+                                        <span class="right"><a href="{{url('masterClassDetails/'.$master['master_id'])}}" class="page-btn ar-btn ar-btn-sm">详细信息</a></span>
                                     </footer>
                                 </section>
                             </div>

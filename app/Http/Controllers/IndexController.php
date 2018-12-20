@@ -28,6 +28,14 @@ class IndexController extends Controller
     {
         return view('home.contact');
     }
+    public function imprint()
+    {
+        return view('home.imprint');
+    }
+    public function dp()
+    {
+        return view('home.dp');
+    }
 
     public function lecturers()
     {
@@ -36,9 +44,9 @@ class IndexController extends Controller
         return view('home.lecturers', compact('lecturer'));
     }
 
-    public function lecturerDetails()
+    public function lecturerDetails($lecturerId)
     {
-        $lecturer = Lecturer::all();
+        $lecturer = Lecturer::find($lecturerId);
 
         return view('home.lecturerDetails', compact('lecturer'));
     }
@@ -50,11 +58,12 @@ class IndexController extends Controller
         return view('home.masterClasses', compact('masters'));
     }
 
-    public function masterClassDetails()
+    public function masterClassDetails($masterId)
     {
-        $masters = Masters::all();
 
-        return view('home.masterClassDetails', compact('masters'));
+        $master = Masters::find($masterId);
+
+        return view('home.masterClassDetails', compact('master'));
     }
 
     public function news()
@@ -71,9 +80,11 @@ class IndexController extends Controller
         return view('home.educational', compact('educational'));
     }
 
-    public function educationalDetails()
+    public function educationalDetails($eduId)
     {
-        return view('home.educationalDetails');
+        $edu = Educational::find($eduId);
+
+        return view('home.educationalDetails',compact('edu'));
     }
 
     public function competitions()
@@ -83,9 +94,10 @@ class IndexController extends Controller
         return view('home.competitions', compact('competitions'));
     }
 
-    public function competitionDetails()
+    public function competitionDetails($comp_id)
     {
-        return view('home.competitionDetails');
+        $comp = Competition::find($comp_id);
+        return view('home.competitionDetails',compact('comp'));
     }
 
     public function registration()

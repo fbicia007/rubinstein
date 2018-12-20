@@ -278,7 +278,7 @@
                         <ul id="menu-footer-menu" class="menu">
                             <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="{{url('contact')}}">联系我们</a></li>
                             <li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="{{url('imprint')}}">免责声明</a></li>
-                            <li id="menu-item-6306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6306"><a href="{{url('dataProtection')}}">版权声明</a></li>
+                            <li id="menu-item-6306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6306"><a href="{{url('dp')}}">版权声明</a></li>
                         </ul>
                     </div>
                 </div>

@@ -82,9 +82,10 @@ class IndexController extends Controller
 
     public function educationalDetails($eduId)
     {
+        $educational = Educational::all();
         $edu = Educational::find($eduId);
 
-        return view('home.educationalDetails',compact('edu'));
+        return view('home.educationalDetails',compact('edu','educational'));
     }
 
     public function competitions()

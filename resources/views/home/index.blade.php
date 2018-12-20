@@ -14,14 +14,14 @@
                             <div class="row" menu="Studium - DE">
                                 <div class="small-8 medium-8 columns small-centered">
                                     <ul id="menu-studium" class="small-block-grid-1 medium-block-grid-2">
-                                        <li id="menu-item-4418" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4418"><a href="{{url('')}}">预科班</a></li>
-                                        <li id="menu-item-4417" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4417"><a href="{{url('')}}">本科学制</a></li>
-                                        <li id="menu-item-4420" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4420"><a href="{{url('')}}">大师班课程</a></li>
-                                        <li id="menu-item-4421" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4421"><a href="{{url('')}}">硕士学制</a></li>
-                                        <li id="menu-item-4419" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4419"><a href="{{url('')}}">进修课程</a></li>
-                                        <li id="menu-item-6338" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-6338"><a href="{{url('')}}">音乐管理</a></li>
-                                        <li id="menu-item-5193" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-5193"><a href="{{url('')}}">独奏研究生课程</a></li>
-                                        <li id="menu-item-4416" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4416"><a href="{{url('')}}">音乐会演奏家课程</a></li>
+                                        <li id="menu-item-4418" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4418"><a href="{{url('educationalDetails/7')}}">预科班</a></li>
+                                        <li id="menu-item-4417" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4417"><a href="{{url('educationalDetails/3')}}">本科学制</a></li>
+                                        <li id="menu-item-4420" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4420"><a href="{{url('educationalDetails/5')}}">大师班课程</a></li>
+                                        <li id="menu-item-4421" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4421"><a href="{{url('educationalDetails/1')}}">硕士学制</a></li>
+                                        <li id="menu-item-4419" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4419"><a href="{{url('educationalDetails/4')}}">进修课程</a></li>
+                                        <li id="menu-item-6338" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-6338"><a href="{{url('educationalDetails/8')}}">音乐管理</a></li>
+                                        <li id="menu-item-5193" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-5193"><a href="{{url('educationalDetails/6')}}">独奏研究生课程</a></li>
+                                        <li id="menu-item-4416" class="menu-item menu-item-type-post_type menu-item-object-study menu-item-4416"><a href="{{url('educationalDetails/2')}}">音乐会演奏家课程</a></li>
                                     </ul>
                                 </div>
                             </div>

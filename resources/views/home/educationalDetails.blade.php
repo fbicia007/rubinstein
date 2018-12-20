@@ -16,6 +16,39 @@
                 </div>
             </div>
 
+
+            @if($edu['edu_id'] == 1)
+                @foreach($educational as $educational_one)
+                    @if($educational_one['edu_un_id'] == 1)
+                        <div class="row collapse ar-margin-bottom">
+                            <div class="small-12 show-for-small-only columns">
+                                <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
+                                            style="width: 100%; margin: 0;" src="{{url('images/edu/'.$educational_one['edu_pic'])}}" /></a>
+                            </div>
+                            <div class="small-12 columns clearfix">
+                                <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
+                                            style="width: auto; margin: 0;"
+                                            class="medium-up-height-250 show-for-medium-up left"
+                                            src="{{url('images/edu/'.$educational_one['edu_pic'])}}" /></a>
+                                <div style="display: inline;">
+                                    <section class="ar-panel medium-up-height-250">
+                                        <header>
+                                            <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}">{{$educational_one['edu_name']}}</a>
+                                        </header>
+                                        <section class="content">
+                                            <p>{{$educational_one['edu_info']}}</p>
+                                        </section>
+                                        <footer>
+                                            <span class="right"><a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}" class="page-btn ar-btn ">更多信息</a></span>
+                                        </footer>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            @else
+
             <div class="row pad-top-20 pad-btm-20 ">
                 <div class="small-12 columns">
                     <div class="row collapse">
@@ -79,6 +112,8 @@
                     </div>
                 </div>
             </div>
+            @endif
+
         </div>
 
     </div>

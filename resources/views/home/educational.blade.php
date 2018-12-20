@@ -25,6 +25,7 @@
 
 
                     @foreach($educational as $educational_one)
+                        @if($educational_one['edu_un_id'] != 1)
                     <div class="row collapse ar-margin-bottom">
                         <div class="small-12 show-for-small-only columns">
                             <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
@@ -50,6 +51,7 @@
                             </div>
                         </div>
                     </div>
+                        @endif
                     @endforeach
 
 

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Model\Competition;
+use App\Http\Model\Contacts;
 use App\Http\Model\Educational;
 use App\Http\Model\Lecturer;
+use App\Http\Model\Locations;
 use App\Http\Model\Masters;
 use App\Http\Model\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class IndexController extends Controller
 {
@@ -26,6 +29,26 @@ class IndexController extends Controller
 
     public function contact()
     {
+
+        if(Input::all()){
+
+            $input = Input::except('_token');
+
+            $add = Contacts::create($input);
+
+            if($add){
+
+                return back()->with('errors','非常感谢您的问询，我们将很快与您取得联系!');
+
+            }else{
+
+                return back()->with('errors','提交错误！');
+
+            }
+
+
+
+        }
         return view('home.contact');
     }
     public function imprint()
@@ -60,6 +83,26 @@ class IndexController extends Controller
 
     public function masterClassDetails($masterId)
     {
+
+        if(Input::all()){
+
+            $input = Input::except('_token');
+
+            $add = Contacts::create($input);
+
+            if($add){
+
+                return back()->with('errors','报名已发送成功，我们将很快与您取得联系!');
+
+            }else{
+
+                return back()->with('errors','提交错误！');
+
+            }
+
+
+
+        }
 
         $master = Masters::find($masterId);
 
@@ -97,17 +140,59 @@ class IndexController extends Controller
 
     public function competitionDetails($comp_id)
     {
+
+        if(Input::all()){
+
+            $input = Input::except('_token');
+
+            $add = Contacts::create($input);
+
+            if($add){
+
+                return back()->with('errors','报名已发送成功，我们将很快与您取得联系!');
+
+            }else{
+
+                return back()->with('errors','提交错误！');
+
+            }
+
+
+
+        }
+
         $comp = Competition::find($comp_id);
         return view('home.competitionDetails',compact('comp'));
     }
 
     public function registration()
     {
+        if(Input::all()){
+
+            $input = Input::except('_token');
+
+            $add = Contacts::create($input);
+
+            if($add){
+
+                return back()->with('errors','报名已发送成功，我们将很快与您取得联系!');
+
+            }else{
+
+                return back()->with('errors','提交错误！');
+
+            }
+
+
+
+        }
         return view('home.registration');
     }
 
-    public function location()
+    public function location($locId)
     {
-        return view('home.location');
+        $location = Locations::find($locId);
+
+        return view('home.location', compact('location'));
     }
 }

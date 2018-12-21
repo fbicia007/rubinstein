@@ -44,12 +44,12 @@
 
     <link rel='shortlink' href='http://www.rubinstein-academy.com/' />
 
-    <link rel="alternate" hreflang="de-DE" href="http://www.rubinstein-akademie.de/" />
-    <link rel="alternate" hreflang="en-US" href="http://www.rubinstein-akademie.de/en/" />
-    <link rel="alternate" hreflang="zh-CN" href="http://www.rubinstein-academy.com" />
-    <link rel="alternate" hreflang="ko-KR" href="http://www.rubinstein-akademie.de/ko/" />
-    <link rel="alternate" hreflang="ja" href="http://www.rubinstein-akademie.de/ja/" />
-    <link rel="alternate" hreflang="ru-RU" href="http://www.rubinstein-akademie.de/ru/" />
+    {{--<link rel="alternate" hreflang="de-DE" href="http://www.rubinstein-akademie.de/" />--}}
+    {{--<link rel="alternate" hreflang="en-US" href="http://www.rubinstein-akademie.de/en/" />--}}
+    {{--<link rel="alternate" hreflang="zh-CN" href="http://www.rubinstein-academy.com" />--}}
+    {{--<link rel="alternate" hreflang="ko-KR" href="http://www.rubinstein-akademie.de/ko/" />--}}
+    {{--<link rel="alternate" hreflang="ja" href="http://www.rubinstein-akademie.de/ja/" />--}}
+    {{--<link rel="alternate" hreflang="ru-RU" href="http://www.rubinstein-akademie.de/ru/" />--}}
 
     <style type="text/css">#lang_sel a, #lang_sel a.lang_sel_sel{color:;}#lang_sel a:hover, #lang_sel a.lang_sel_sel:hover{color:;}#lang_sel a.lang_sel_sel, #lang_sel a.lang_sel_sel:visited{background-color:;}#lang_sel a.lang_sel_sel:hover{background-color:;}#lang_sel li ul a, #lang_sel li ul a:visited{color:;}#lang_sel li ul a:hover{color:;}#lang_sel li ul a, #lang_sel li ul a:link, #lang_sel li ul a:visited{background-color:;}#lang_sel li ul a:hover{background-color:;}#lang_sel a, #lang_sel a:visited{border-color:;} #lang_sel ul ul{border-top:1px solid ;}</style>
     <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
@@ -81,23 +81,24 @@
                             <li id="menu-item-5414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5414"><a href="https://www.rubinstein-akademie.de/wp-login.php?redirect_to=http%3A%2F%2Fwww.rubinstein-akademie.de%2Fstudenten%2F&reauth=1">学生登陆</a></li>
                         </ul></div>                </div>
             </div>
-            <div class="small-12 medium-3 large-2 columns">
-                <div class="sticky-lng">
-                    <div id="lang_sel"   >
-                        <ul>
-                            <li><a href="#" class="lang_sel_sel icl-de">简体中文</a> <ul><li class="icl-en">
-                                        <a href="http://www.rubinstein-akademie.de/en/">English</a>
-                                    </li><li class="icl-zh-hans">
-                                        <a href="http://www.rubinstein-akademie.de/">Deutsch</a>
-                                    </li><li class="icl-ko">
-                                        <a href="http://www.rubinstein-akademie.de/ko/">한국어</a>
-                                    </li><li class="icl-ja">
-                                        <a href="http://www.rubinstein-akademie.de/ja/">日本語</a>
-                                    </li><li class="icl-ru">
-                                        <a href="http://www.rubinstein-akademie.de/ru/">Русский</a>
-                                    </li></ul></li>
-                        </ul>
-                    </div>                </div>
+            {{--<div class="small-12 medium-3 large-2 columns">--}}
+                {{--<div class="sticky-lng">--}}
+                    {{--<div id="lang_sel"   >--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="#" class="lang_sel_sel icl-de">简体中文</a> <ul><li class="icl-en">--}}
+                                        {{--<a href="http://www.rubinstein-akademie.de/en/">English</a>--}}
+                                    {{--</li><li class="icl-zh-hans">--}}
+                                        {{--<a href="http://www.rubinstein-akademie.de/">Deutsch</a>--}}
+                                    {{--</li><li class="icl-ko">--}}
+                                        {{--<a href="http://www.rubinstein-akademie.de/ko/">한국어</a>--}}
+                                    {{--</li><li class="icl-ja">--}}
+                                        {{--<a href="http://www.rubinstein-akademie.de/ja/">日本語</a>--}}
+                                    {{--</li><li class="icl-ru">--}}
+                                        {{--<a href="http://www.rubinstein-akademie.de/ru/">Русский</a>--}}
+                                    {{--</li></ul></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>                --}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -131,14 +132,14 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="mob-lng">
-                <a href="#" class='active'>简体中文</a>
-                <a href="http://www.rubinstein-akademie.de/en/" >Englisch</a>
-                <a href="http://www.rubinstein-akademie.de/" >Deutsch</a>
-                <a href="http://www.rubinstein-akademie.de/ko/" >Koreanisch</a>
-                <a href="http://www.rubinstein-akademie.de/ja/" >Japanisch</a>
-                <a href="http://www.rubinstein-akademie.de/ru/" >Russisch</a>
-            </div>
+            {{--<div class="mob-lng">--}}
+                {{--<a href="#" class='active'>简体中文</a>--}}
+                {{--<a href="http://www.rubinstein-akademie.de/en/" >Englisch</a>--}}
+                {{--<a href="http://www.rubinstein-akademie.de/" >Deutsch</a>--}}
+                {{--<a href="http://www.rubinstein-akademie.de/ko/" >Koreanisch</a>--}}
+                {{--<a href="http://www.rubinstein-akademie.de/ja/" >Japanisch</a>--}}
+                {{--<a href="http://www.rubinstein-akademie.de/ru/" >Russisch</a>--}}
+            {{--</div>--}}
         </div>
     </div>
 
@@ -183,8 +184,8 @@
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="home-links right" style="margin: 0px 15px 15px;">
-                                <a href='{{url('location')}}'>杜塞尔多夫</a>&nbsp;&nbsp;
-                                <a href='{{url('location')}}'>柏林</a>
+                                <a href='{{url('location/1')}}'>杜塞尔多夫</a>&nbsp;&nbsp;
+                                <a href='{{url('location/2')}}'>柏林</a>
                             </div>
                         </div>
                     </div>
@@ -195,33 +196,35 @@
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="home-links">
-                            <a href='{{url('location')}}'>杜塞尔多夫</a>&nbsp;&nbsp;
-                            <a href='{{url('location')}}'>柏林</a>
+                            <a href='{{url('location/1')}}'>杜塞尔多夫</a>&nbsp;&nbsp;
+                            <a href='{{url('location/2')}}'>柏林</a>
                         </div>
                         <a href="{{url('registration')}}" class="page-btn ar-btn anmelden-btn ">考试申请</a>
-                        <div id="lang_sel"   >
-                            <ul>
-                                <li>
-                                    <a href="#" class="lang_sel_sel icl-de">简体中文</a>
-                                    <ul>
-                                        <li class="icl-en">
-                                            <a href="http://www.rubinstein-akademie.de/en/">English</a>
-                                        </li><li class="icl-zh-hans">
-                                            <a href="http://www.rubinstein-akademie.de/">Deutsch</a>
-                                        </li><li class="icl-ko">
-                                            <a href="http://www.rubinstein-akademie.de/ko/">한국어</a>
-                                        </li><li class="icl-ja">
-                                            <a href="http://www.rubinstein-akademie.de/ja/">日本語</a>
-                                        </li><li class="icl-ru">
-                                            <a href="http://www.rubinstein-akademie.de/ru/">Русский</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        {{--<div id="lang_sel"   >--}}
+                            {{--<ul>--}}
+                                {{--<li>--}}
+                                    {{--<a href="#" class="lang_sel_sel icl-de">简体中文</a>--}}
+                                    {{--<ul>--}}
+                                        {{--<li class="icl-en">--}}
+                                            {{--<a href="http://www.rubinstein-akademie.de/en/">English</a>--}}
+                                        {{--</li><li class="icl-zh-hans">--}}
+                                            {{--<a href="http://www.rubinstein-akademie.de/">Deutsch</a>--}}
+                                        {{--</li><li class="icl-ko">--}}
+                                            {{--<a href="http://www.rubinstein-akademie.de/ko/">한국어</a>--}}
+                                        {{--</li><li class="icl-ja">--}}
+                                            {{--<a href="http://www.rubinstein-akademie.de/ja/">日本語</a>--}}
+                                        {{--</li><li class="icl-ru">--}}
+                                            {{--<a href="http://www.rubinstein-akademie.de/ru/">Русский</a>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
+                                {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
@@ -238,7 +241,7 @@
                         <p>Flinger Straße 1 <br />40213 Düsseldorf</p>
 
                         <a href="tel:0211 86 29 04 45" class="phone">Tel.: 0211 86 29 04 45</a> <br />
-                        <a href="mailto:info@rubinstein-akademie.de" class="mail">info@rubinstein-akademie.de</a>
+                        <a href="mailto:info@rubinstein-academy.com" class="mail">info@rubinstein-academy.com</a>
 
                         <div  class="social-links">
                             <a href="https://www.facebook.com/groups/111396235547116/" class="fb" target="_blank"></a>
@@ -287,31 +290,9 @@
     </div>
 
 </div>
-<script type="text/javascript">
-    var addthis_config = {"ui_atversion":300,"data_track_clickback":true};
 
-</script>
-<!-- AddThis Settings Begin -->
-<script type="text/javascript">
-    var addthis_product = "wpp-5.0.5";
-    var wp_product_version = "wpp-5.0.5";
-    var wp_blog_version = "4.8.2";
-    if (typeof(addthis_config) == "undefined") {
-        var addthis_config = {"ui_atversion":300,"data_track_clickback":true};
-    }
-    if (typeof(addthis_share) == "undefined") {
-
-    }
-</script>
 
 <link rel='stylesheet' id='addthis_output-css'  href='{{asset('home/css/output.css?ver=4.8.2')}}' type='text/css' media='all' />
-<script type='text/javascript' src='{{asset('home/js/jquery.form.min.js?ver=3.51.0-2014.06.20')}}'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var _wpcf7 = {"loaderUrl":"http:\/\/www.rubinstein-akademie.de\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Senden ..."};
-    /* ]]> */
-</script>
-<script type='text/javascript' src='{{asset('home/js/scripts.js?ver=4.1')}}'></script>
 <script type='text/javascript' src='{{asset('home/js/jquery.cycle2.js?ver=2.1.6')}}'></script>
 <script type='text/javascript' src='{{asset('home/js/jquery.cycle2.carousel.js?ver=v20130528')}}'></script>
 <script type='text/javascript' src='{{asset('home/js/jquery.cycle2.swipe.js?ver=v20121120')}}'></script>
@@ -325,7 +306,7 @@
 <script type='text/javascript' src='{{asset('home/js/wp-embed.min.js?ver=4.8.2')}}'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
-    var icl_vars = {"current_language":"de","icl_home":"http:\/\/www.rubinstein-akademie.de\/"};
+    var icl_vars = {"current_language":"zh","icl_home":"http:\/\/www.rubinstein-academy.com\/"};
     /* ]]> */
 </script>
 <script type='text/javascript' src='{{asset('home/js/sitepress.js?ver=4.8.2')}}'></script>

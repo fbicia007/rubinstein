@@ -8,43 +8,25 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="{{url('admin/index')}}">
                                 <span data-feather="home"></span>
-                                HOME <span class="sr-only">(current)</span>
+                                首页
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('admin/basic')}}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                基础信息
+                            <a class="nav-link" href="{{url('admin/reg_edu')}}">
+                                <span data-feather="star"></span>
+                                报考列表
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="item.php?id={$gameId}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                教师
+                            <a class="nav-link" href="{{url('admin/reg_master')}}">
+                                <span data-feather="bar-chart-2"></span>
+                                大师班报名列表
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="item.php?id={$gameId}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                学制
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="item.php?id={$gameId}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                比赛
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="item.php?id={$gameId}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                大师班
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="item.php?id={$gameId}">
-                                <span><img width="24" height="24" src="http://wow-blue.com/"></span>
-                                新闻
+                            <a class="nav-link" href="{{url('admin/reg_match')}}">
+                                <span data-feather="award"></span>
+                                比赛报名列表
                             </a>
                         </li>
 
@@ -67,7 +49,7 @@
                         <div class="mark">{{session('pwError')}}</div>
                     @endif
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userEditor">
-                        编辑个人信息
+                        修改密码
                     </button>
                 </div>
             </main>
@@ -76,7 +58,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="userEditorLabel">修改个人信息</h5>
+                            <h5 class="modal-title" id="userEditorLabel">修改密码</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

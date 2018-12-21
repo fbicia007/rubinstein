@@ -37,9 +37,14 @@
         </div>
 
 
+
+
         <div class="post-6160 competition type-competition status-publish has-post-thumbnail hentry" id="post-6160">
             <div class="row pad-top-20 pad-btm-20 ">
                 <div class="small-12 columns">
+                    @if(count($errors)>0)
+                        <div style="margin-bottom: 40px;">{{$errors}}</div>
+                    @endif
                     <h1 class="page-title">鲁宾斯坦国际赛事 - {{$comp['competition_subject']}}</h1>
                     <h2 class="page-title">{{$comp['competition_title']}}</h2>
                 </div>
@@ -133,7 +138,7 @@
 
                                 <div class="small-12 medium-4 large-12 columns">
                                     <section class="ar-panel dark-grey ar-margin-bottom">
-                                        <header>Zahlung</header>
+                                        <header>付款方式</header>
                                         <section class="content">
                                             <ul class="fa-ul">
                                                 <li><i class="fa fa-li fa-university" aria-hidden="true"></i>
@@ -171,7 +176,12 @@
                     <!-- CF7 Start -->
                     <div class="wpcf7" id="wpcf7-f4819-p6160-o1" lang="de-DE" dir="ltr">
                         <div class="screen-reader-response"></div>
-                        <form name="" action="" method="post" class="wpcf7-form" enctype="multipart/form-data" novalidate="novalidate">
+                        <form name="compForm" action="" method="post" class="wpcf7-form" enctype="multipart/form-data" >
+                            {{csrf_field()}}
+
+                            <input type="text" name="reg_type" value="3" style="display:none" />
+                            <input type="text" name="comp_id" value="{{$comp['competition_id']}}" style="display:none" />
+
 
                             <div class="contact-form">
                                 <div>
@@ -180,10 +190,10 @@
                             <div class="ctc-field">
                                 <div class="ctc-left">
                                     <span class="wpcf7-form-control-wrap anrede">
-                                        <select name="anrede" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false">
-                                            <option value="">性别 (*)</option>
-                                            <option value="Frau">女</option>
-                                            <option value="Herr">男</option>
+                                        <select name="reg_gender" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" required>
+                                            <option disabled selected value>性别 (*)</option>
+                                            <option value="女">女</option>
+                                            <option value="男">男</option>
                                         </select>
                                     </span>
                                 </div>
@@ -191,49 +201,49 @@
                             <div class="ctc-field">
                                 <div class="ctc-left">
                                     <span class="wpcf7-form-control-wrap last-name">
-                                        <input type="text" name="last-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="姓 (*)" />
+                                        <input type="text" name="reg_lastName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="姓 (*)" required/>
                                     </span>
                                 </div>
                                 <div class="ctc-right">
                                     <span class="wpcf7-form-control-wrap first-name">
-                                        <input type="text" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="名 (*)" />
+                                        <input type="text" name="reg_firstName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="名 (*)" required/>
                                     </span>
                                 </div>
                             </div>
                             <div class="ctc-field">
                                 <div class="ctc-left">
                                     <span class="wpcf7-form-control-wrap birthday">
-                                        <input type="text" name="birthday" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="生日 (*)" />
+                                        <input type="date" name="reg_birthday" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="生日 (*)" required/>
                                     </span>
                                 </div>
                                 <div class="ctc-right">
                                     <span class="wpcf7-form-control-wrap birth">
-                                        <input type="text" name="birth" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="出生地 (*)" />
+                                        <input type="text" name="reg_birthLocation" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="出生地 (*)" required/>
                                     </span>
                                 </div>
                             </div>
                             <div class="ctc-field">
                                 <span class="wpcf7-form-control-wrap nationality">
-                                    <input type="text" name="nationality" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="国籍 (*)" />
+                                    <input type="text" name="reg_nation" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="国籍 (*)" required/>
                                 </span>
                             </div>
                             <div class="ctc-field">
                                 <div class="ctc-left"> <span class="wpcf7-form-control-wrap address1">
-                                        <input type="text" name="address1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="联系地址 (*)" /></span>
+                                        <input type="text" name="reg_address" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="联系地址 (*)" required/></span>
                                 </div>
                                 <div class="ctc-right"><span class="wpcf7-form-control-wrap address2">
-                                        <input type="text" name="address2" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="邮编/城市/国家 (*)" /></span>
+                                        <input type="text" name="reg_address2" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="邮编/城市/国家 (*)" required/></span>
                                 </div>
                             </div>
                             <div class="ctc-field">
                                 <div class="ctc-left">
                                     <span class="wpcf7-form-control-wrap your-email">
-                                        <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email ctc-text" aria-required="true" aria-invalid="false" placeholder="E-Mail (*)" />
+                                        <input type="email" name="reg_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email ctc-text" aria-required="true" aria-invalid="false" placeholder="E-Mail (*)" required/>
                                     </span>
                                 </div>
                                 <div class="ctc-right">
                                     <span class="wpcf7-form-control-wrap telefon">
-                                        <input type="text" name="telefon" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="联系电话 (*)" />
+                                        <input type="text" name="reg_tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ctc-text" aria-required="true" aria-invalid="false" placeholder="联系电话" />
                                     </span>
                                 </div>
                             </div>
@@ -242,7 +252,7 @@
                                     <span class="wpcf7-form-control wpcf7-checkbox ar-checkbox">
                                         <span class="wpcf7-list-item first last">
                                             <label>
-                                                <input type="checkbox" name="piano[]" value="Ich brauche einen Klavierbegleiter für den Wettbewerb" />&nbsp;
+                                                <input type="checkbox" name="reg_help" value="1" />&nbsp;
                                                 <span class="wpcf7-list-item-label">我需要一个钢琴伴奏</span>
                                             </label>
                                         </span>
@@ -250,34 +260,31 @@
                                 </span>
                             </div>
                             <div class="ctc-field">
-                                <span class="wpcf7-form-control-wrap links"><textarea name="links" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="用做第一轮比赛的视频链接"></textarea></span>
+                                <span class="wpcf7-form-control-wrap links"><textarea name="reg_text" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="用做第一,第二轮比赛的视频链接" required></textarea></span>
                             </div>
+
                             <div class="ctc-field">
-                                <span class="wpcf7-form-control-wrap programm"><textarea name="programm" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="用做第二轮比赛的视频链接"></textarea></span>
-                            </div>
-                            <div class="ctc-field">
-                                其他文档 (pdf, jpg, jpeg, 最大不能超过 10 MB)
-                            </div>
-                            <div class="ctc-field">
-                                <div class="ctc-left"><span class="wpcf7-form-control-wrap your-file1"><input type="file" name="your-file1" value="1" size="40" class="wpcf7-form-control wpcf7-file ctc-text" aria-invalid="false" /></span></div>
-                                <div class="ctc-right"><span class="wpcf7-form-control-wrap your-file2"><input type="file" name="your-file2" value="1" size="40" class="wpcf7-form-control wpcf7-file ctc-text" aria-invalid="false" /></span></div>
-                            </div>
-                            <div class="ctc-field">
-                                <div class="ctc-left"><span class="wpcf7-form-control-wrap your-file3"><input type="file" name="your-file3" value="1" size="40" class="wpcf7-form-control wpcf7-file ctc-text" aria-invalid="false" /></span></div>
-                                <div class="ctc-right"><span class="wpcf7-form-control-wrap your-file4"><input type="file" name="your-file4" value="1" size="40" class="wpcf7-form-control wpcf7-file ctc-text" aria-invalid="false" /></span></div>
+                                其他文档 (请通过邮件附件发送致 <a href="mailto:info@rubinstein-academy.com" class="mail">info@rubinstein-academy.com</a>)
                             </div>
                             <div class="ctc-field">
                                 <p><b>通过对您提供材料的审核和确认来确定您是否能晋级比赛决赛圈，电此并提交表单证明您已同意我们的条款。</b></p>
                                 <p> <span class="wpcf7-form-control-wrap accept_rules">
                                         <span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required ar-checkbox">
-                                            <span class="wpcf7-list-item first last"><label><input type="checkbox" name="accept_rules[]" value="Die Bedingungen habe ich durchgelesen und akzeptiert." />&nbsp;
-                                                    <span class="wpcf7-list-item-label">说明和条款您已阅读并同意</span></label></span></span></span>
+                                            <span class="wpcf7-list-item first last"><label>
+                                                    <input type="checkbox" value="已同意条款" required/>&nbsp;
+                                                    <span class="wpcf7-list-item-label">说明和条款您已阅读并同意</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
                                 </p></div>
                             <div class="wpcf7-response-output wpcf7-display-none"></div>
                             <div class="ctc-field">
                                 <input type="submit" value="发送" class="wpcf7-form-control wpcf7-submit ctc-btn" />
                             </div>
+                            </div>
                         </form>
+
                     </div>			<!-- CF7 End -->
                 </div>
             </div>

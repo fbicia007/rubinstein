@@ -29,9 +29,12 @@ Route::group(['middleware' => ['admin.login']], function() {
 Route::group(['middleware' => ['admin.login'],'prefix' => 'admin', 'namespace'=>'Admin'], function() {
 
     Route::any('index','IndexController@index');
-    Route::get('basic','IndexController@basic');
+//    Route::get('basic','IndexController@basic');
     Route::get('logout','LoginController@logout');
     Route::any('password','IndexController@password');
+    Route::get('reg_edu','IndexController@reg_edu');
+    Route::get('reg_master','IndexController@reg_master');
+    Route::get('reg_match','IndexController@reg_match');
 
 });
 
@@ -45,7 +48,7 @@ Route::get('admin/crypt','Admin\LoginController@crypt');
 
 Route::get('','IndexController@index');
 Route::get('infos','IndexController@infos');
-Route::get('contact','IndexController@contact');
+Route::any('contact','IndexController@contact');
 Route::get('news','IndexController@news');
 Route::get('branch','IndexController@branch');
 Route::get('imprint','IndexController@imprint');
@@ -56,14 +59,14 @@ Route::get('lecturerDetails/{lecturerId}','IndexController@lecturerDetails');
 
 
 Route::get('masterClasses','IndexController@masterClasses');
-Route::get('masterClassDetails/{masterId}','IndexController@masterClassDetails');
+Route::any('masterClassDetails/{masterId}','IndexController@masterClassDetails');
 
 Route::get('educationalSystem','IndexController@educationalSystem');
 Route::get('educationalDetails/{eduId}','IndexController@educationalDetails');
 
 Route::get('competitions','IndexController@competitions');
-Route::get('competitionDetails/{compId}','IndexController@competitionDetails');
+Route::any('competitionDetails/{compId}','IndexController@competitionDetails');
 
-Route::get('registration','IndexController@registration');
-Route::get('location','IndexController@location');
+Route::any('registration','IndexController@registration');
+Route::get('location/{locId}','IndexController@location');
 

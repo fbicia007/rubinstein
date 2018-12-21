@@ -16,10 +16,16 @@
                 </div>
             </div>
 
-
             @if($edu['edu_id'] == 1)
                 @foreach($educational as $educational_one)
                     @if($educational_one['edu_un_id'] == 1)
+
+                        <div class="row collapse">
+                            <div class="small-12 columns">
+                                <h1 class="page-title">音乐硕士学制</h1>
+                            </div>
+                        </div>
+
                         <div class="row collapse ar-margin-bottom">
                             <div class="small-12 show-for-small-only columns">
                                 <a href="{{url('educationalDetails/'.$educational_one['edu_id'])}}"><img
@@ -78,7 +84,7 @@
                                             <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;<b>{{$edu['edu_test_date']}}</b>
                                         </section>
                                         <footer class="text-center">
-                                            <a href="http://www.rubinstein-akademie.de/anmeldeformular" class="page-btn ar-btn anmelden-btn ">申请注册</a>
+                                            <a href="{{url('registration')}}" class="page-btn ar-btn anmelden-btn ">申请注册</a>
                                         </footer>
                                     </section>
                                 </div>

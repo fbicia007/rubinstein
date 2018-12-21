@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Model\Contacts;
 use App\Http\Model\User;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -70,11 +72,59 @@ class IndexController extends CommonController
         }
 
     }
+//
+//    public function basic()
+//    {
+//        $stu = Contacts::with('reg_type',1);
+//
+//        dd($stu);
+//
+//        return view('admin.basic');
+//
+//    }
 
-    public function basic()
+    public function reg_edu()
+    {
+        //$list = Contacts::where('reg_type',1)->get();
+
+        $list = DB::table('contacts')->leftJoin('educational', 'contacts.edu_id', '=', 'educational.edu_id')
+            ->where('reg_type', 1)
+            ->get();
+        //$list = json_decode(json_encode($list)); //it will return you stdclass object
+        $list = json_decode(json_encode($list),true); //it will return you data in array
+
+        return view('admin.reg_edu', compact('list'));
+
+    }
+
+    public function reg_master()
     {
 
-        return view('admin.basic');
+//        $list = Contacts::where('reg_type',2)->get();
+
+        $list = DB::table('contacts')->leftJoin('masters', 'contacts.master_id', '=', 'masters.master_id')
+            ->where('reg_type', 2)
+            ->get();
+        //$list = json_decode(json_encode($list)); //it will return you stdclass object
+        $list = json_decode(json_encode($list),true); //it will return you data in array
+
+
+        return view('admin.reg_master', compact('list'));
+
+    }
+
+    public function reg_match()
+    {
+
+//        $list = Contacts::where('reg_type',3)->get();
+
+        $list = DB::table('contacts')->leftJoin('competitions', 'contacts.comp_id', '=', 'competitions.competition_id')
+            ->where('reg_type', 3)
+            ->get();
+        //$list = json_decode(json_encode($list)); //it will return you stdclass object
+        $list = json_decode(json_encode($list),true); //it will return you data in array
+
+        return view('admin.reg_match', compact('list'));
 
     }
 

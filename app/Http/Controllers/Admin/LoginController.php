@@ -23,13 +23,13 @@ class LoginController extends CommonController
 
             $user = User::find($input['email']);
 
+
             if(!$user){
                 return back()->with('msg','用户名或密码错误');
             }
 
             //dd($user);
 
-            //echo $user->user_password;
 
             if($input['email']==$user->user_name && Crypt::decrypt($user->user_password)==$input['password']){
             //if(Crypt::decrypt($user->user_password)==$input['password']){
@@ -64,7 +64,7 @@ class LoginController extends CommonController
     //测试密码加密
     public function crypt()
     {
-        $str = '123456';
+        $str = 'qqqqqq';
         echo $str2 = Crypt::encrypt($str);
         echo '<br/>';
         echo Crypt::decrypt($str2);

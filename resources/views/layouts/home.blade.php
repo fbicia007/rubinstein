@@ -240,8 +240,8 @@
                     <div class="textwidget">
                         <p>Flinger Straße 1 <br />{{\App\Http\Model\BasicInfo::first()->zip}} {{\App\Http\Model\BasicInfo::first()->city}}</p>
 
-                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->tel}}" class="phone">座机电话.: {{\App\Http\Model\BasicInfo::first()->tel}}</a> <br />
-                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->handy}}" class="phone">手机电话.: {{\App\Http\Model\BasicInfo::first()->handy}}</a> （10:00 - 17:00）<br />
+                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->tel}}" class="phone">座机.: {{\App\Http\Model\BasicInfo::first()->tel}}</a> <br />
+                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->handy}}" class="phone">手机.: {{\App\Http\Model\BasicInfo::first()->handy}}</a> （10:00 - 17:00）<br />
                         <a href="mailto:info@rubinstein-academy.com" class="mail">{{\App\Http\Model\BasicInfo::first()->email}}</a>
 
                         <div  class="social-links">

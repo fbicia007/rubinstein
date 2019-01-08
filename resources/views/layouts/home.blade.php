@@ -242,6 +242,7 @@
 
                         <a href="tel:{{\App\Http\Model\BasicInfo::first()->tel}}" class="phone">座机.: {{\App\Http\Model\BasicInfo::first()->tel}}</a> <br />
                         <a href="tel:{{\App\Http\Model\BasicInfo::first()->handy}}" class="phone">手机.: {{\App\Http\Model\BasicInfo::first()->handy}}</a> （10:00 - 17:00）<br />
+                        <p href="" class="phone">微信.: {{\App\Http\Model\BasicInfo::first()->we_chat}}</p>
                         <a href="mailto:info@rubinstein-academy.com" class="mail">{{\App\Http\Model\BasicInfo::first()->email}}</a>
 
                         <div  class="social-links">

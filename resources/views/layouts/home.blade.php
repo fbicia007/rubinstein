@@ -236,16 +236,17 @@
         <div class="row">
             <div class="small-12 medium-4 columns">
                 <div class="footer-area" >
-                    <h4>鲁宾斯坦音乐学院</h4>
+                    <h4>{{\App\Http\Model\BasicInfo::first()->name}}</h4>
                     <div class="textwidget">
-                        <p>Flinger Straße 1 <br />40213 Düsseldorf</p>
+                        <p>Flinger Straße 1 <br />{{\App\Http\Model\BasicInfo::first()->zip}} {{\App\Http\Model\BasicInfo::first()->city}}</p>
 
-                        <a href="tel:0211 86 29 04 45" class="phone">Tel.: 0211 86 29 04 45</a> <br />
-                        <a href="mailto:info@rubinstein-academy.com" class="mail">info@rubinstein-academy.com</a>
+                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->tel}}" class="phone">座机电话.: {{\App\Http\Model\BasicInfo::first()->tel}}</a> <br />
+                        <a href="tel:{{\App\Http\Model\BasicInfo::first()->handy}}" class="phone">手机电话.: {{\App\Http\Model\BasicInfo::first()->handy}}</a> （10:00 - 17:00）<br />
+                        <a href="mailto:info@rubinstein-academy.com" class="mail">{{\App\Http\Model\BasicInfo::first()->email}}</a>
 
                         <div  class="social-links">
-                            <a href="https://www.facebook.com/groups/111396235547116/" class="fb" target="_blank"></a>
-                            <a href="https://twitter.com/pianoacademy" target="_blank" class="twt"></a>
+                            <a href="{{\App\Http\Model\BasicInfo::first()->facebook}}" class="fb" target="_blank"></a>
+                            <a href="{{\App\Http\Model\BasicInfo::first()->tw}}" target="_blank" class="twt"></a>
                         </div>
                     </div>
                 </div>
@@ -265,9 +266,9 @@
                     <h4>银行账户</h4>
                     <div class="textwidget">
                         <p>
-                            Hypovereinsbank<br><br>
-                            IBAN: &nbsp;DE39&nbsp;3022&nbsp;0190&nbsp;0364&nbsp;0033&nbsp;90<br>
-                            Swift (BIC): HYVEDEMM414
+                            {{\App\Http\Model\BasicInfo::first()->bank_name}}<br><br>
+                            IBAN: &nbsp;{{\App\Http\Model\BasicInfo::first()->iban}}<br>
+                            Swift (BIC): {{\App\Http\Model\BasicInfo::first()->bic}}
                         </p>
                     </div>
                 </div>

@@ -69,6 +69,11 @@
                                                         Tel.: &nbsp;{{$location['loc_tel']}}
                                                     </div>
                                                 </li>
+                                                <li><i class="fa fa-li fa-wechat" aria-hidden="true"></i>
+                                                    <div>
+                                                        微信: &nbsp;{{$location['loc_wechat']}}
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </section>
                                     </section>

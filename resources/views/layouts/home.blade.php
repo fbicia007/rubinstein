@@ -5,6 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"content="安东鲁宾斯坦国际音乐学院,鲁宾斯坦音乐学院,鲁宾斯坦国际音乐学院,鲁宾斯坦音乐学院杜塞尔多夫,德国杜塞尔多夫鲁宾斯坦音乐学院">
+    <meta name="description"content="德国杜塞尔多夫安东鲁宾斯坦国际音乐学院官方中文网站。">
+    <meta name="robots"content="all">
+
+    <meta name="author"content="xuwang,info@xuwang.de">
+    <META NAME="COPYRIGHT"CONTENT="德国杜塞尔多夫安东鲁宾斯坦国际音乐学院">
+
+
     <title>Anton Rubinstein Musikakademie</title>
 
     <link rel="stylesheet" href="{{asset('home/css/language-selector.css?v=3.1.8.2')}}" type="text/css" media="all" />

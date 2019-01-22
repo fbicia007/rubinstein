@@ -25,10 +25,6 @@ Route::group(['middleware' => ['admin.login']], function() {
 });
 */
 
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
-
 //优化中间件提出相同部分的前缀
 Route::group(['middleware' => ['admin.login'],'prefix' => 'admin', 'namespace'=>'Admin'], function() {
 

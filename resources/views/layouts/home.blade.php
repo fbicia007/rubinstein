@@ -13,7 +13,7 @@
     <META NAME="COPYRIGHT"CONTENT="德国杜塞尔多夫安东鲁宾斯坦国际音乐学院">
 
 
-    <title>Anton Rubinstein Musikakademie</title>
+    <title>安东鲁宾斯坦国际音乐学院 Anton Rubinstein Musikakademie</title>
 
     <link rel="stylesheet" href="{{asset('home/css/language-selector.css?v=3.1.8.2')}}" type="text/css" media="all" />
 
